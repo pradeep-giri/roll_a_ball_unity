@@ -28,8 +28,11 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVartical = Input.GetAxis("Vertical");
+        //float moveHorizontal = Input.GetAxis("Horizontal");
+        //float moveVartical = Input.GetAxis("Vertical");
+
+        float moveHorizontal = Input.acceleration.x;
+        float moveVartical = Input.acceleration.y;
 
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVartical);
 
